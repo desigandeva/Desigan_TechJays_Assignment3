@@ -1,0 +1,7 @@
+<h1 style="text-align: center;">Add Student</h1>
+
+<%= render partial: 'layouts/form', locals: { data: @student, action: 'create'} %>
+<br>
+<div class="back-btn" style="text-align: center;">
+    <%= link_to 'Back', student_index_path , style:"text-decoration: none;border: 1px black solid;border-radius: 8px;font-weight: bold;padding: 4px 8px;color: black;background-color: aqua;"%>
+</div>

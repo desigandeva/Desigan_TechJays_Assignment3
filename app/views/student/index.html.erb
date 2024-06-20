@@ -1,0 +1,18 @@
+<h1 style="text-align: center;">Student's</h1>
+<% if @students.empty? %>
+<p style="text-align: center;">There is no student's data available. </p>
+<% else %>
+<%  @students.each do |student| %>
+<div class="name" style="text-align: center;padding: 5px;">
+    <%= student.name %>
+    <% if can? :manage, student %>
+    <%= link_to 'Show', student, style:"text-decoration: none;border: 1px black solid;border-radius: 8px;font-weight: bold;padding: 3px 6px;color: black;background-color: aqua;" %>
+    <% end %>
+</div>
+
+<% end %>
+<% end %>
+<br><br>
+<div class="add-btn" style="text-align: center;">
+    <%= link_to 'Add', new_student_path, style:"text-decoration: none;border: 1px black solid;border-radius: 8px;font-weight: bold;padding: 4px 8px;color: black;background-color: aqua;" %>
+</div>

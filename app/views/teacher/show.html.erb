@@ -1,0 +1,16 @@
+<h1 style="text-align: center;">Teacher</h1>
+<%= render partial: 'layouts/data', locals: {data: @teacher} %>
+
+<div class="btn-container" style="justify-content: center;display: grid;">
+    <div class="btn" style="width: 300px;justify-content: space-evenly;display: flex;">
+        <p>
+            <%= link_to 'Edit', edit_teacher_path(@teacher), style: "background-color: yellow;text-decoration: none;border: 1px black solid;border-radius: 8px;font-weight: bold;padding: 4px 8px;color: black;" %>
+        </p>
+        <p>
+            <%= link_to 'Delete',@teacher ,data: { turbo_method: :delete}, style: "background-color: red;text-decoration: none;border: 1px black solid;border-radius: 8px;font-weight: bold;padding: 4px 8px;color: black;" %>
+        </p>
+        <p>
+            <%= link_to 'Back', teacher_index_path, style: "background-color: aqua;text-decoration: none;border: 1px black solid;border-radius: 8px;font-weight: bold;padding: 4px 8px;color: black;" %>
+        </p>
+    </div>
+</div>

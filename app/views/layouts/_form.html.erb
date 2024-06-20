@@ -1,0 +1,25 @@
+<div class="form-container">
+    <div class="form">
+        <%= form_for data, url: {action: action,id: data.id} do |f| %>
+        <%= f.label :name, "Name", style: "width: 100px;" %>
+        <span>: </span>
+        <%= f.text_field :name, style: "width: 170px;" %>
+        <br><br>
+        <%= f.label :dob, "Date Of Birth", style: "width: 100px;" %>
+        <span>: </span>
+        <%= f.date_field :dob , style: "width: 170px;" %>
+        <br><br>
+        <%= f.label :address, "Address", style: "width: 100px;" %>
+        <span>: </span>
+        <%= f.text_field :address, style: "width: 170px;" %>
+        <br><br>
+        <%= f.label :phone, "Phone", style: "width: 100px;" %>
+        <span>: </span>
+        <%= f.text_field :phone, style: "width: 170px;" %>
+        <br><br>
+        <div class="submit-btn">
+            <%= f.submit %>
+        </div>
+        <% end %>
+    </div>
+</div>
